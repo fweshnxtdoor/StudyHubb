@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>General Chemistry</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #121212;
+      color: #fff;
+      padding: 1rem;
+      line-height: 1.8;
+    }
+
+    .navbar {
+      background-color: #1f1f1f;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .logo {
+      font-family: 'Arial', sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      display: flex;
+    }
+
+    .logo-black {
+      background-color: #000;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .logo-yellow {
+      background-color: #ffcc00;
+      color: #000;
+      padding: 4px 8px;
+      border-radius: 0 3px 3px 0;
+    }
+
+    .back-button {
+      background-color: #2a2a2a;
+      border: none;
+      padding: 0.5rem 1rem;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 1rem;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #ffcc00;
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    .content {
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: #1f1f1f;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #ffcc00;
+      text-align: center;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    h2 {
+      color: #ffcc00;
+      cursor: pointer;
+      transition: color 0.3s ease, transform 0.3s ease;
+      margin-top: 1.5rem;
+    }
+
+    h2:hover {
+      color: #fff;
+      transform: translateX(10px);
+    }
+
+    .collapsible-content {
+      display: none;
+      margin-top: 1rem;
+      padding: 1rem;
+      background-color: #2a2a2a;
+      border-left: 4px solid #ffcc00;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .collapsible-content p {
+      margin: 0.5rem 0;
+      color: #ccc;
+    }
+
+    .collapsible-content ul {
+      margin: 0.5rem 0;
+      padding-left: 1.5rem;
+      color: #ccc;
+    }
+
+    a {
+      color: #ffcc00;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #fff;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const headings = document.querySelectorAll('h2');
+      headings.forEach(heading => {
+        heading.addEventListener('click', () => {
+          const content = heading.nextElementSibling;
+          if (content && content.classList.contains('collapsible-content')) {
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <span class="logo-black">Study</span><span class="logo-yellow">Hub</span>
+    </div>
+  </div>
+
+  <div class="content">
+    <a href="index.html" class="back-button">← Back to Home</a>
+    <h1>Earth Science</h1>
+
+    <h2>Chapter 1: Earth's Materials</h2>
+    <div class="collapsible-content">
+      <p>Earth’s materials include water, soil, energy, rocks, and minerals. Water is essential for sustaining life and enabling geological processes like erosion and weathering. Soil is a mixture of organic and inorganic substances that support plant growth and maintain the structure of the planet’s surface. Energy, which can be either renewable or non-renewable, powers both natural systems and human activities. Rocks are solid aggregates of minerals that make up the Earth's crust. Minerals are homogeneous, naturally occurring, inorganic solids with a definite chemical composition and internal crystal structure.</p>
+      <p><strong>Examples of Earth's Materials:</strong></p>
+      <ul>
+        <li>Water (rivers, lakes, oceans)</li>
+        <li>Soil (loam, clay, silt)</li>
+        <li>Energy resources (solar, wind, coal, oil)</li>
+        <li>Rocks (granite, basalt, limestone)</li>
+        <li>Minerals (quartz, feldspar)</li>
+      </ul>
+    </div>
+
+    <h2>Chapter 2: Minerals</h2>
+    <div class="collapsible-content">
+      <h3>Unit I. Definition and Characteristics of Minerals</h3>
+      <p>Minerals are naturally occurring, inorganic, homogeneous solids with a specific chemical composition and an orderly atomic arrangement. They must occur naturally, be inorganic, exist as solids under normal conditions, and have a specific chemical formula. A mineral’s internal structure forms a crystal lattice, determining its physical shape. Water, despite being naturally occurring and inorganic, is not classified as a mineral because it is liquid at Earth’s surface temperatures.</p>
+      <p><strong>Characteristics of Minerals:</strong></p>
+      <ul>
+        <li>Homogeneous composition</li>
+        <li>Naturally occurring</li>
+        <li>Inorganic</li>
+        <li>Solid at standard conditions</li>
+        <li>Definable chemical composition</li>
+        <li>Crystal lattice structure</li>
+      </ul>
+
+      <h3>Unit II. Formation of Minerals</h3>
+      <p>Minerals form through a variety of natural processes. Solidification of melts occurs when molten material cools and crystallizes. Precipitation from a solution happens when minerals separate out from liquids, usually during evaporation. Solid-state diffusion involves the rearrangement of atoms within solids under extreme pressure and temperature. Biomineralization occurs when living organisms produce minerals as part of biological processes. Fumarolic mineralization happens when minerals crystallize from volcanic gases.</p>
+      <p><strong>Processes of Mineral Formation:</strong></p>
+      <ul>
+        <li>Solidification of melts (e.g., formation of igneous rocks)</li>
+        <li>Precipitation from solution (e.g., salt from seawater)</li>
+        <li>Solid-state diffusion (e.g., diamond formation)</li>
+        <li>Biomineralization (e.g., shells of mollusks)</li>
+        <li>Fumarolic mineralization (e.g., sulfur near volcanic vents)</li>
+      </ul>
+
+      <h3>Unit III. Classification of Minerals</h3>
+      <p>Minerals are classified based on their chemical composition. Silicates are the most abundant and contain silicon and oxygen. Oxides are made up of metal ions bonded with oxygen. Sulfides consist of metal ions bonded to sulfur. Sulfates contain metal ions bonded with sulfate groups. Halides involve metal ions bonded to halogen elements. Carbonates are minerals with carbonate ions bonded to metals. Native metals are minerals that consist of pure elements.</p>
+      <p><strong>Examples of Mineral Classifications:</strong></p>
+      <ul>
+        <li>Silicates: Quartz, Feldspar, Olivine</li>
+        <li>Oxides: Magnetite, Hematite</li>
+        <li>Sulfides: Galena, Pyrite</li>
+        <li>Sulfates: Gypsum, Barite</li>
+        <li>Halides: Halite (rock salt), Fluorite</li>
+        <li>Carbonates: Calcite, Dolomite</li>
+        <li>Native Metals: Gold, Copper, Silver</li>
+      </ul>
+
+      <h3>Unit IV. Properties of Minerals</h3>
+      <p>Minerals can be identified through their observable properties. Crystal form reflects the internal atomic structure. Luster describes how a mineral reflects light. Color is the visual appearance of the mineral but can vary due to impurities. Streak is the color of the mineral in powdered form. Cleavage describes how a mineral breaks along specific planes of weakness, while fracture refers to irregular breakage. Specific gravity measures the density compared to water. Hardness refers to resistance to scratching, typically measured by Mohs scale.</p>
+      <p><strong>Examples of Mineral Properties:</strong></p>
+      <ul>
+        <li>Crystal form: Cubic shape of pyrite</li>
+        <li>Luster: Metallic luster of galena</li>
+        <li>Color: Green color of olivine</li>
+        <li>Streak: Red streak of hematite</li>
+        <li>Cleavage: Perfect cleavage in mica</li>
+        <li>Fracture: Conchoidal fracture of quartz</li>
+        <li>Specific Gravity: High gravity of galena</li>
+        <li>Hardness: Diamond hardness at Mohs scale 10</li>
+      </ul>
+    </div>
+
+    <h2>Chapter 3: Mining</h2>
+    <div class="collapsible-content">
+      <h3>Unit I: Definition and Types of Mining</h3>
+      <p>Mining is the process of extracting minerals from the Earth. Underground mining involves the creation of tunnels to access deep deposits, while open-pit mining extracts minerals from surface excavations. Mining is vital to the economy of the Philippines, a country rich in mineral resources with major mining activities in various provinces.</p>
+      <p><strong>Examples of Mining Types:</strong></p>
+      <ul>
+        <li>Underground mining (e.g., tunnels in Benguet)</li>
+        <li>Open-pit mining (e.g., nickel mines in Palawan)</li>
+      </ul>
+
+      <h3>Unit II: Ore Processing</h3>
+      <p>After extraction, minerals undergo ore processing, where valuable components are separated from waste material. This process often involves crushing, chemical treatments, and the use of large amounts of water, generating waste known as tailings. These tailings can contain toxic substances harmful to both the environment and human health.</p>
+
+      <h3>Examples of Toxic Substances in Mining Tailings</h3>
+      <p><strong>Examples of toxic substances found in mining tailings:</strong></p>
+      <ul>
+        <li>Mercury: Damages the central nervous system</li>
+        <li>Lead: Causes developmental and neurological issues</li>
+        <li>Arsenic: Known carcinogen</li>
+        <li>Cadmium: Causes kidney and hormonal damage</li>
+        <li>Copper, Zinc, Iron: Cause organ damage and blood disorders</li>
+      </ul>
+
+      <h3>Unit III: Environmental Impact of Mining</h3>
+      <p>Mining activities can severely impact the environment. Deforestation, water pollution, habitat destruction, and the introduction of toxic substances into ecosystems are common consequences. If not properly managed, mining can cause long-term damage to natural resources and human communities.</p>
+      <p><strong>Examples of Environmental Impacts:</strong></p>
+      <ul>
+        <li>Contamination of rivers from tailings</li>
+        <li>Deforestation due to open-pit mining</li>
+        <li>Soil degradation from chemical spills</li>
+        <li>Loss of biodiversity in mining sites</li>
+      </ul>
+
+      <h3>Unit IV: Mining Industry and Regulation in the Philippines</h3>
+      <p>The mining industry in the Philippines is governed by Republic Act 7942, known as the Philippine Mining Act of 1995. This law limits foreign ownership of mining companies to forty percent to protect national interests. Major mining corporations operate in the country, providing economic benefits but also facing the responsibility of sustainable practices.</p>
+      <p><strong>Examples of Major Mining Companies in the Philippines:</strong></p>
+      <ul>
+        <li>SM Investment Corporation</li>
+        <li>Benguet Corporation</li>
+        <li>Nickel Asia Corporation</li>
+        <li>Global Ferronickel Holdings</li>
+        <li>Atlas Consolidated Mining</li>
+      </ul>
+    </div>
+
+    <h2>Chapter 4: Endogenic Processes</h2>
+    <div class="collapsible-content">
+      <h3>Unit I: Definition of Endogenic Processes</h3>
+      <p>Endogenic processes refer to the internal processes occurring within the Earth’s layers, driven by the Earth's internal heat. These processes produce movements in the asthenosphere, such as convection currents, and cause movements on the Earth's surface.</p>
+      <p><strong>Examples of Endogenic Processes:</strong></p>
+      <ul>
+        <li>Tectonic plate movements</li>
+        <li>Volcanic eruptions</li>
+        <li>Mountain formation</li>
+      </ul>
+
+      <h3>Unit II: Internal Structure of the Earth</h3>
+      <p>The Earth's internal structure is divided into several layers. The crust includes the continental crust, which is less dense and thicker, and the oceanic crust, which is denser and thinner. The mantle consists of the upper mantle, where rocks are brittle, and the lower mantle, where rocks are softer and can flow. The core is extremely hot, with the outer core being liquid and made of iron and nickel, and the inner core being solid due to immense pressure.</p>
+      <p><strong>Examples of Earth's Layers:</strong></p>
+      <ul>
+        <li>Continental Crust: Made of granite</li>
+        <li>Oceanic Crust: Made of basalt</li>
+        <li>Upper Mantle: Brittle rocks</li>
+        <li>Lower Mantle: Flowing rocks</li>
+        <li>Outer Core: Liquid iron and nickel</li>
+        <li>Inner Core: Solid due to pressure</li>
+      </ul>
+
+      <h3>Unit III: Sources of Earth's Internal Heat</h3>
+      <p>The Earth's internal heat comes from several sources, fueling endogenic processes. Compression of matter generates heat as the planet’s gravity increases. The sinking of heavier metals toward the Earth's center creates additional heat through movement and compression. The residual heat from planetary formation contributes, and radioactive decay of elements such as uranium and thorium releases heat.</p>
+      <p><strong>Sources of Earth's Heat:</strong></p>
+      <ul>
+        <li>Compression of matter</li>
+        <li>Sinking of heavier metals</li>
+        <li>Residual heat from planet formation</li>
+        <li>Radioactive decay of heavy elements</li>
+      </ul>
+
+      <h3>Unit IV: Formation and Movement of Magma</h3>
+      <p>Magma forms beneath the Earth's surface through different processes. Decompression melting occurs when pressure decreases on rising mantle material, allowing it to melt. Flux melting involves the addition of volatiles like water and carbon dioxide, lowering the melting point of rocks. Heat-transfer melting happens when hot magma transfers heat to surrounding rocks, causing them to melt.</p>
+      <p><strong>Processes of Magma Formation:</strong></p>
+      <ul>
+        <li>Decompression melting</li>
+        <li>Flux melting (volatile addition)</li>
+        <li>Heat-transfer melting</li>
+      </ul>
+      <p><strong>Reasons Why Magma Moves Upward:</strong></p>
+      <ul>
+        <li>Less density and higher buoyancy</li>
+        <li>Pressure from surrounding rocks forcing it upward</li>
+      </ul>
+    </div>
+
+    <h2>Chapter 5: Exogenic Processes</h2>
+    <div class="collapsible-content">
+      <h3>Unit I: Definition of Exogenic Processes</h3>
+      <p>Exogenic processes are external geological processes that occur on the surface of the Earth. These include the disintegration and decomposition of rocks mainly through weathering, erosion, mass wasting, and deposition.</p>
+
+      <h3>Unit II: Mechanical or Physical Weathering</h3>
+      <p>Mechanical or physical weathering breaks rocks into smaller pieces without changing their chemical composition. This happens through several natural and human-influenced factors.</p>
+      <p><strong>Examples of Mechanical Weathering Factors:</strong></p>
+      <ul>
+        <li>Pressure: Expansion and fracturing of rocks as overlying materials erode</li>
+        <li>Temperature: Expansion and contraction due to heating and freezing</li>
+        <li>Frost wedging: Water freezes in cracks, expands, and breaks the rock</li>
+        <li>Abrasion: Rocks breaking due to impact and friction in streams and seashores</li>
+        <li>Organic activity: Roots growing into cracks and breaking rocks</li>
+        <li>Human activities: Digging, quarrying, and deforestation</li>
+        <li>Burrowing animals: Rats, rabbits, and squirrels disturbing soil and rocks</li>
+      </ul>
+
+      <h3>Unit III: Chemical Weathering</h3>
+      <p>Chemical weathering alters the composition of rocks through chemical reactions, weakening and breaking them down.</p>
+      <p><strong>Examples of Chemical Weathering Processes:</strong></p>
+      <ul>
+        <li>Dissolution: Minerals dissolve in water (e.g., stalactites and stalagmites formation)</li>
+        <li>Hydrolysis: Reaction of minerals like feldspar with water to form clay</li>
+        <li>Oxidation: Reaction of oxygen with minerals like iron, leading to rusting</li>
+      </ul>
+
+      <h3>Unit IV: Erosion</h3>
+      <p>Erosion involves the separation and movement of weathered rock materials due to external agents such as water, wind, and glaciers. This process transports sediments to new locations.</p>
+      <p><strong>Examples of Erosion Agents:</strong></p>
+      <ul>
+        <li>Water (rivers, rainfall)</li>
+        <li>Wind (desert sands, storms)</li>
+        <li>Glaciers (ice movement carving landscapes)</li>
+      </ul>
+
+      <h3>Unit V: Mass Wasting</h3>
+      <p>Mass wasting refers to the downslope movement of soil, rock, and debris under the influence of gravity, independent of water, wind, or ice.</p>
+      <p><strong>Examples of Mass Wasting Events:</strong></p>
+      <ul>
+        <li>Landslides</li>
+        <li>Rockfalls</li>
+        <li>Mudflows</li>
+        <li>Slumps</li>
+      </ul>
+
+      <h3>Unit VI: Deposition</h3>
+      <p>Deposition is the process by which sediments carried by erosion agents settle in a new location, forming new landforms like deltas and sand dunes.</p>
+      <p><strong>Examples of Deposition Environments:</strong></p>
+      <ul>
+        <li>Riverbanks</li>
+        <li>Ocean floors</li>
+        <li>Desert dunes</li>
+        <li>Glacial valleys</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>

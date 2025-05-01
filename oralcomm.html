@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oral Communication</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #121212;
+      color: #fff;
+      padding: 1rem;
+      line-height: 1.8;
+    }
+
+    .navbar {
+      background-color: #1f1f1f;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .logo {
+      font-family: 'Arial', sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      display: flex;
+    }
+
+    .logo-black {
+      background-color: #000;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .logo-yellow {
+      background-color: #ffcc00;
+      color: #000;
+      padding: 4px 8px;
+      border-radius: 0 3px 3px 0;
+    }
+
+    .back-button {
+      background-color: #2a2a2a;
+      border: none;
+      padding: 0.5rem 1rem;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 1rem;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #ffcc00;
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    .content {
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: #1f1f1f;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #ffcc00;
+      text-align: center;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    h2 {
+      color: #ffcc00;
+      cursor: pointer;
+      transition: color 0.3s ease, transform 0.3s ease;
+      margin-top: 1.5rem;
+    }
+
+    h2:hover {
+      color: #fff;
+      transform: translateX(10px);
+    }
+
+    .collapsible-content {
+      display: none;
+      margin-top: 1rem;
+      padding: 1rem;
+      background-color: #2a2a2a;
+      border-left: 4px solid #ffcc00;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .collapsible-content p {
+      margin: 0.5rem 0;
+      color: #ccc;
+    }
+
+    a {
+      color: #ffcc00;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #fff;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const headings = document.querySelectorAll('h2');
+      headings.forEach(heading => {
+        heading.addEventListener('click', () => {
+          const content = heading.nextElementSibling;
+          if (content && content.classList.contains('collapsible-content')) {
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <span class="logo-black">Study</span><span class="logo-yellow">Hub</span>
+    </div>
+  </div>
+
+  <div class="content">
+    <a href="index.html" class="back-button">← Back to Home</a>
+    <h1>Oral Communication</h1>
+
+    <h2>Definition of Oral Communication</h2>
+    <div class="collapsible-content">
+      <p>Oral communication is the process of verbally transmitting information and ideas from one individual or group to another. It involves spoken words and includes face-to-face conversations, speeches, phone calls, meetings, and presentations.</p>
+    </div>
+
+    <h2>The Process of Oral Communication</h2>
+    <div class="collapsible-content">
+      <p>Oral communication follows a structured process where a message is created, delivered, received, and understood.</p>
+    </div>
+
+    <h2>Five Elements of Communication</h2>
+    <div class="collapsible-content">
+      <p>The process of communication involves five basic elements: sender and receiver, message, channel, feedback, noise, and settings.</p>
+    </div>
+
+    <h2>Communication Model</h2>
+    <div class="collapsible-content">
+      <p>A communication model is a visual or structured way to understand how communication happens between people. It shows the flow of a message from the sender to the receiver, including all the key components involved. Communication models help us see how communication works and what can affect it—like misunderstanding, poor delivery, or external noise. They are useful tools for improving how we communicate.</p>
+    </div>
+
+    <h2>Non-Verbal Communication</h2>
+    <div class="collapsible-content">
+      <p>Non-verbal communication is the way we send messages without using words. It includes body language, facial expressions, gestures, and even tone of voice. Non-verbal communication often says more than words. It's important because it can support, contradict, or replace spoken messages. Being aware of it helps improve understanding and relationships.</p>
+    </div>
+
+    <h2>Effective Communication Skills</h2>
+    <div class="collapsible-content">
+      <p>Effective communication skills are the tools we use to share ideas clearly and understand others. These skills help us build strong relationships, avoid misunderstandings, and express ourselves confidently. Good communication is not just about talking—it's about connecting. Mastering these skills helps you become a better speaker, listener, and team member in any situation.</p>
+    </div>
+
+    <h2>Intercultural Communication</h2>
+    <div class="collapsible-content">
+      <p>Intercultural communication is the exchange of information between people from different cultures or backgrounds. It involves understanding and respecting cultural differences to communicate effectively. Intercultural communication helps build understanding, reduce conflict, and promote global cooperation. In a diverse world, it's a vital skill for personal and professional success.</p>
+    </div>
+
+    <h2>Functions of Communication</h2>
+    <div class="collapsible-content">
+      <p>Communication serves many purposes in our daily lives. It’s more than just sharing information—it helps us build relationships, express ourselves, and influence others. Each time we communicate, we are usually fulfilling one or more of these functions. Understanding them helps us communicate with purpose and respond appropriately in different situations.</p>
+    </div>
+
+    <h2>Speech Acts and Communication Strategies</h2>
+    <div class="collapsible-content">
+      <p>Speech acts are actions we perform through speaking. When we say something, we’re not just using words—we're doing something with them (e.g., asking, apologizing, promising). Communication strategies are techniques used to overcome barriers and make communication more effective, especially when there's a misunderstanding, language gap, or cultural difference. Speech acts help us understand the purpose behind what someone says, while communication strategies help us make sure the message is understood clearly, especially in difficult or cross-cultural situations.</p>
+    </div>
+
+    <h2>Types of Speech and Speeches According to Delivery</h2>
+    <div class="collapsible-content">
+      <p>In public speaking, speeches can be classified by their purpose and by their method of delivery. Understanding both helps speakers prepare and present effectively. Choosing the right type and delivery method depends on the occasion, audience, and speaker’s goal. Effective speakers match their style to the situation for maximum impact.</p>
+    </div>
+
+    <h2>Principles in Writing a Speech</h2>
+    <div class="collapsible-content">
+      <p>Writing a speech requires careful planning and attention to detail. The key principles ensure that the speech is clear, engaging, and effectively communicates the intended message to the audience. The principles of speech writing focus on crafting a message that is not only clear and organized but also engaging and impactful for the audience. Effective speeches leave a memorable impression.</p>
+    </div>
+
+    <h2>Basic Principles of Speech Delivery</h2>
+    <div class="collapsible-content">
+      <p>Effective speech delivery involves presenting your message in a way that captures and holds the audience’s attention. Strong delivery makes your message clear, persuasive, and memorable.</p>
+    </div>
+  </div>
+</body>
+</html>

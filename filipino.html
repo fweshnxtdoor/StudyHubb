@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filipino-1</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #121212;
+      color: #fff;
+      padding: 1rem;
+      line-height: 1.8;
+    }
+
+    .navbar {
+      background-color: #1f1f1f;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .logo {
+      font-family: 'Arial', sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      display: flex;
+    }
+
+    .logo-black {
+      background-color: #000;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .logo-yellow {
+      background-color: #ffcc00;
+      color: #000;
+      padding: 4px 8px;
+      border-radius: 0 3px 3px 0;
+    }
+
+    .back-button {
+      background-color: #2a2a2a;
+      border: none;
+      padding: 0.5rem 1rem;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 1rem;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #ffcc00;
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    .content {
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: #1f1f1f;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #ffcc00;
+      text-align: center;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    h2 {
+      color: #ffcc00;
+      cursor: pointer;
+      transition: color 0.3s ease, transform 0.3s ease;
+      margin-top: 1.5rem;
+    }
+
+    h2:hover {
+      color: #fff;
+      transform: translateX(10px);
+    }
+
+    .collapsible-content {
+      display: none;
+      margin-top: 1rem;
+      padding: 1rem;
+      background-color: #2a2a2a;
+      border-left: 4px solid #ffcc00;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .collapsible-content p {
+      margin: 0.5rem 0;
+      color: #ccc;
+    }
+
+    .collapsible-content ul {
+      margin: 0.5rem 0;
+      padding-left: 1.5rem;
+      color: #ccc;
+    }
+
+    a {
+      color: #ffcc00;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #fff;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const headings = document.querySelectorAll('h2');
+      headings.forEach(heading => {
+        heading.addEventListener('click', () => {
+          const content = heading.nextElementSibling;
+          if (content && content.classList.contains('collapsible-content')) {
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <span class="logo-black">Study</span><span class="logo-yellow">Hub</span>
+    </div>
+  </div>
+
+  <div class="content">
+    <a href="index.html" class="back-button">← Back to Home</a>
+    <h1>Filipino</h1>
+
+    <h2 class="collapsible">Chapter 1: Mga Batayang Kaalaman sa Iba't Ibang Uri ng Teksto</h2>
+    <div class="collapsible-content">
+      <p>Ang pag-unawa sa iba't ibang anyo ng teksto ay mahalaga upang maging mahusay sa pagbasa at pagsulat. Bawat uri ng teksto ay may kanya-kanyang layunin at gamit na kailangang kilalanin upang maiparating nang wasto ang impormasyon sa mambabasa. Sa kabanatang ito, tatalakayin natin ang iba't ibang uri ng teksto at ang mga pangunahing katangian ng bawat isa.</p>
+
+      <h3>Unit I: Tekstong Impormatibo</h3>
+      <ul>
+        <li>Nagbibigay ng tiyak at makatotohanang impormasyon. Layunin nitong magpaliwanag o magturo nang obhetibo at lohikal.</li>
+      </ul>
+
+      <h3>Unit II: Tekstong Naratibo</h3>
+      <ul>
+        <li>Nagsasalaysay ng mga pangyayari o kwento upang maghatid ng karanasan o aral. Binibigyang-diin nito ang pagbuo ng kawili-wiling kwento para sa mambabasa.</li>
+      </ul>
+
+      <h3>Unit III: Tekstong Deskriptibo</h3>
+      <ul>
+        <li>Naglalayong maglarawan ng tao, bagay, lugar, o damdamin. Gumagamit ng masining na wika upang makalikha ng malinaw na imahen sa isipan ng mambabasa.</li>
+      </ul>
+
+      <h3>Unit IV: Tekstong Argumentatibo</h3>
+      <ul>
+        <li>Nanghihikayat sa mambabasa na tanggapin ang isang pananaw gamit ang matibay na ebidensya. Binibigyang-halaga ang lohikal at organisadong pangangatwiran.</li>
+      </ul>
+
+      <h3>Unit V: Tekstong Prosidyural</h3>
+      <ul>
+        <li>Nagpapakita ng sunod-sunod na hakbang upang makamit ang isang layunin. Mahalagang maging malinaw at detalyado ang bawat proseso.</li>
+      </ul>
+    </div>
+
+    <h2 class="collapsible">Chapter 2: Batayan sa Pagbasa at Pagsulat</h2>
+    <div class="collapsible-content">
+      <p>Ang isang mabisang sulatin ay nakasalalay sa wastong pagsunod sa ilang pangunahing batayan sa pagbasa at pagsulat. Sa pamamagitan ng mga ito, naipapahayag nang malinaw at maayos ang mensahe sa mga mambabasa. Tatalakayin sa kabanatang ito ang mga dapat isaalang-alang upang makalikha ng isang mahusay at epektibong sulatin.</p>
+
+      <h3>Unit I: Malinaw na Layunin</h3>
+      <ul>
+        <li>Kailangang may tiyak at madaling maunawaang pangunahing mensahe ang isang teksto.</li>
+      </ul>
+
+      <h3>Unit II: Organisadong Ideya</h3>
+      <ul>
+        <li>Mahalaga ang lohikal na pagkakasunod-sunod ng mga ideya upang maging madali para sa mambabasa ang pagsunod sa daloy ng sulatin.</li>
+      </ul>
+
+      <h3>Unit III: Wastong Gramatika</h3>
+      <ul>
+        <li>Ang paggamit ng tamang baybay, bantas, balarila, at estruktura ay nagpapataas ng kredibilidad at propesyonalismo ng sulatin.</li>
+      </ul>
+
+      <h3>Unit IV: Angkop sa Target na Mambabasa</h3>
+      <ul>
+        <li>Kailangang ang nilalaman, wika, at estilo ay angkop sa antas ng interes at pangangailangan ng mambabasa.</li>
+      </ul>
+    </div>
+
+    <h2 class="collapsible">Chapter 3: Pagproseso ng Datos at Hakbang sa Pagsulat</h2>
+    <div class="collapsible-content">
+      <p>Bago makabuo ng isang epektibong sulatin, kinakailangang dumaan sa tamang proseso ng pagkuha at pagsasaayos ng impormasyon. Ang pagproseso ng datos ay tumutulong upang mapatibay ang nilalaman at gawing kapani-paniwala ang anumang uri ng sulatin. Sa kabanatang ito, malalaman kung paano ang maayos na pagproseso ng datos ay nagiging pundasyon ng mahusay na pagsulat.</p>
+
+      <h3>Unit I: Pagkalap at Pagsasaayos ng Datos</h3>
+      <ul>
+        <li>Kinokolekta ang mga impormasyon mula sa iba't ibang mapagkakatiwalaang sanggunian at inayos ayon sa layunin ng sulatin.</li>
+      </ul>
+
+      <h3>Unit II: Pagsusuri ng Datos</h3>
+      <ul>
+        <li>Sinusuri at pinipili ang pinakamahalagang datos na susuporta sa nilalaman ng sulatin.</li>
+      </ul>
+
+      <h3>Unit III: Pagbibigay-Kahulugan sa Datos</h3>
+      <ul>
+        <li>Binibigyang-paliwanag at iniuugnay ang datos upang maging makabuluhan at madaling maunawaan ng mambabasa.</li>
+      </ul>
+    </div>
+
+    <h2 class="collapsible">Chapter 4: Mga Espesipikong Uri ng Sulatin</h2>
+    <div class="collapsible-content">
+      <p>Ang bawat uri ng sulatin ay may partikular na layunin at estilo, depende sa nais iparating sa mambabasa. Sa kabanatang ito, bibigyang-pansin natin ang mga uri ng tekstong nagbibigay ng impormasyon, naglalarawan, at nanghihikayat. Sa pamamagitan nito, mauunawaan kung paano naiiba ang estruktura at estilo ng bawat uri.</p>
+
+      <h3>Unit I: Tekstong Impormatibo</h3>
+      <ul>
+        <li>Layunin nitong magbigay ng obhetibo at organisadong impormasyon upang mapalawak ang kaalaman ng mambabasa.</li>
+      </ul>
+
+      <h3>Unit II: Tekstong Deskriptibo</h3>
+      <ul>
+        <li>Naglalayong bumuo ng isang malinaw at makulay na larawan sa isipan ng mambabasa sa pamamagitan ng masining na paglalarawan.</li>
+      </ul>
+
+      <h3>Unit III: Tekstong Persweysib</h3>
+      <ul>
+        <li>Nais manghikayat o mangumbinsi ng mambabasa gamit ang matibay na argumento, lohikal na pag-iisip, at emosyonal na apela.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

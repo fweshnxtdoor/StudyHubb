@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudyHub</title>
+  <style>
+    /* General body styling */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* Navbar styling */
+    .navbar {
+      background-color: #1f1f1f;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      display: flex;
+    }
+
+    .logo-black {
+      background-color: #000;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .logo-yellow {
+      background-color: #ffcc00;
+      color: #000;
+      padding: 4px 8px;
+      border-radius: 0 3px 3px 0;
+    }
+
+    .navbar div {
+      font-size: 1rem;
+      color: #ffcc00;
+    }
+
+    /* Filters section */
+    .filters {
+      display: flex;
+      gap: 10px;
+      padding: 1rem;
+      overflow-x: auto;
+      background-color: #1f1f1f;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      border-bottom: 2px solid #ffcc00;
+    }
+
+    .filter-button {
+      background-color: #2a2a2a;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      white-space: nowrap;
+      font-size: 1rem;
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    }
+
+    .filter-button:hover {
+      background-color: #ffcc00;
+      color: #000;
+      transform: scale(1.1);
+    }
+
+    /* Grid section */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .card {
+      background-color: #1e1e1e;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      max-height: 160px;
+      object-fit: cover;
+      display: block;
+      border-bottom: 2px solid #ffcc00;
+    }
+
+    .card-content {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .card-content h3 {
+      font-size: 1.2rem;
+      margin: 0;
+      color: #ffcc00;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .card-quote {
+      padding: 0.75rem;
+      font-size: 0.9rem;
+      color: #ccc;
+      text-align: center;
+      font-style: italic;
+      background-color: #1f1f1f;
+      border-top: 1px solid #2a2a2a;
+    }
+
+    /* Footer styling */
+    .footer {
+      background-color: #1f1f1f;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      border-top: 2px solid #ffcc00;
+    }
+
+    .footer a {
+      color: #ffcc00;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer a:hover {
+      color: #fff;
+    }
+
+    /* Card link styling */
+    .card-link {
+      text-decoration: none; /* Remove underline from links */
+      color: inherit;
+      display: block;
+    }
+
+    .card-link:hover {
+      opacity: 0.9;
+    }
+
+    /* Loading screen styling */
+    .loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #121212;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; /* Center logo and spinner vertically */
+      z-index: 1000;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+
+    .loading-screen.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .loading-spinner {
+      border: 4px solid rgba(255, 255, 255, 0.2);
+      border-top: 4px solid #ffcc00;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="loading-screen hidden" id="loadingScreen">
+    <div class="logo" style="text-align: center; margin-bottom: 1rem;">
+      <span class="logo-black">Study</span><span class="logo-yellow">Hub</span>
+    </div>
+    <div class="loading-spinner"></div>
+  </div>
+
+  <div class="navbar">
+    <div class="logo">
+      <span class="logo-black">Study</span><span class="logo-yellow">Hub</span>
+    </div>
+    <div id="userName" style="margin-left: auto; color: #ffcc00; font-size: 1rem;"></div>
+    </div>
+
+  <div class="filters">
+    <button class="filter-button" onclick="showLoadingScreen('index.html')">Home</button>
+    <a href="studytips.html" class="filter-button" style="text-decoration: none;" onclick="showLoadingScreen('studytips.html')">Study Tips</a>
+    <a href="timer.html" class="filter-button" style="text-decoration: none;" onclick="showLoadingScreen('timer.html')">Timer</a>
+    <a href="developers.html" class="filter-button" style="text-decoration: none;" onclick="showLoadingScreen('developers.html')">Developers</a>
+  </div>
+
+  <div class="grid">
+    <!-- Example cards -->
+    <div class="card">
+      <a href="genmath.html" class="card-link" onclick="event.preventDefault(); showLoadingScreen('genmath.html')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTra6tx-qsw4CvRqfeAhWeGJcvSkwvT49kRZQ&s" alt="General Mathematics Thumbnail" />
+        <div class="card-content">
+          <h3>GENERAL MATHEMATICS</h3>
+        </div>
+      </a>
+      <div class="card-quote">
+        <p>"Mathematics is the language of the universe."</p>
+      </div>
+    </div>
+    <div class="card">
+      <a href="pre-calculus.html" class="card-link" onclick="event.preventDefault(); showLoadingScreen('pre-calculus.html')">
+        <img src="https://ih1.redbubble.net/image.1528903126.5655/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="Pre Calculus Thumbnail" />
+        <div class="card-content">
+          <h3>PRE CALCULUS</h3>
+        </div>
+      </a>
+      <div class="card-quote">
+        <p>"The bridge between algebra and calculus."</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <a href="earthsci.html" class="card-link" onclick="event.preventDefault(); showLoadingScreen('earthsci.html')">
+        <img src="https://www.pngkit.com/png/detail/34-348271_earth-science-topic-label.png" alt="Earth Science Thumbnail" />
+        <div class="card-content">
+          <h3>EARTH SCIENCE</h3>
+        </div>
+      </a>
+      <div class="card-quote">
+        <p>"Understanding the Earth is key to our future."</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <a href="genchem.html" class="card-link" onclick="event.preventDefault(); showLoadingScreen('genchem.html')">
+        <img src="https://classroom.sisonreview.com/wp-content/uploads/2018/08/Artboard-1-1.png" alt="General Chemistry Thumbnail" style="object-fit: cover; width: 100%; height: 160px;" />
+        <div class="card-content">
+          <h3>GENERAL CHEMISTRY</h3>
+        </div>
+      </a>
+      <div class="card-quote">
+        <p>"Chemistry is the study of matter and its interactions."</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <a href="oralcomm.html" class="card-link" onclick="event.preventDefault(); showLoadingScreen('oralcomm.html')">
+        <img src="https://i.ytimg.com/vi/nD5qE3C0gYM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCPRxnHI_p3wd_j0cZa4Hq6MDDVCw" alt="Oral Communication Thumbnail" />
+        <div class="card-content">
+          <h3>ORAL COMMUNICATION</h3>
+        </div>
+      </a>
+      <div class="card-quote">
+        <p>"Communication is the key to success."</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <a href="filipino.html" class="card-link" onclick="event.preventDefault(); showLoadingScreen('filipino.html')">
+        <img src="https://raketcontent.com/small_Filipino_20250202_202923_0000_034d14766a.png" alt="FIL Thumbnail" style="object-fit: cover; width: 100%; height: 160px; border-bottom: 2px solid #ffcc00;" />
+        <div class="card-content">
+          <h3>FILIPINO</h3>
+        </div>
+      </a>
+      <div class="card-quote">
+        <p>"Language is the road map of a culture."</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <a href="ucspol.html" class="card-link" onclick="event.preventDefault(); showLoadingScreen('ucspol.html')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm84fXs2Z3wUuutGfMrn-F20Yc57HsGQqtgqhCiyg-POAzRVDsG9-_QyY7-YO7EBwDP0k&usqp=CAU" alt="UCSPOL Thumbnail" style="object-fit: cover; width: 100%; height: 160px; border-bottom: 2px solid #ffcc00;" />
+        <div class="card-content">
+          <h3>UCSPOL</h3>
+        </div>
+      </a>
+      <div class="card-quote">
+        <p>"Understanding society is the key to progress."</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <a href="p.e.html" class="card-link" onclick="event.preventDefault(); showLoadingScreen('p.e.html')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuGQwZhvggrMR_qgJ6oqVXR9yFfCvOOMi4yg&s" alt="P.E Thumbnail" style="object-fit: cover; width: 100%; height: 160px; border-bottom: 2px solid #ffcc00;" />
+        <div class="card-content">
+          <h3>PHYSICAL EDUCATION</h3>
+        </div>
+      </a>
+      <div class="card-quote">
+        <p>"Physical fitness is the first requisite of happiness."</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <a href="perdev.html" class="card-link" onclick="event.preventDefault(); showLoadingScreen('perdev.html')">
+        <img src="data:image/png;base64,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" alt="Personality Development Thumbnail" style="object-fit: cover; width: 100%; height: 160px; border-bottom: 2px solid #ffcc00;" />
+        <div class="card-content">
+          <h3>PERSONALITY DEVELOPMENT</h3>
+        </div>
+      </a>
+      <div class="card-quote">
+        <p>"Self-awareness is the foundation of growth."</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>© 2023 StudyHub. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const userNameDiv = document.getElementById('userName');
+      const userName = localStorage.getItem('userName') || 'User'; // Retrieve the name from localStorage or default to 'User'
+      userNameDiv.textContent = userName;
+
+      // Optional: Add hover effect to display a greeting
+      userNameDiv.addEventListener('mouseenter', () => {
+        userNameDiv.textContent = `Hello, ${userName}!`;
+      });
+
+      userNameDiv.addEventListener('mouseleave', () => {
+        userNameDiv.textContent = userName;
+      });
+    });
+
+    function showLoadingScreen(targetUrl) {
+      const loadingScreen = document.getElementById('loadingScreen');
+      loadingScreen.classList.remove('hidden');
+      setTimeout(() => {
+        window.location.href = targetUrl;
+      }, 2000); // Redirect after 2 seconds
+    }
+  </script>
+
+</body>
+</html>
+

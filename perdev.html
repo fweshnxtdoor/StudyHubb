@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personality Development</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #121212;
+      color: #fff;
+      padding: 1rem;
+      line-height: 1.8;
+    }
+
+    .navbar {
+      background-color: #1f1f1f;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .logo {
+      font-family: 'Arial', sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      display: flex;
+    }
+
+    .logo-black {
+      background-color: #000;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .logo-yellow {
+      background-color: #ffcc00;
+      color: #000;
+      padding: 4px 8px;
+      border-radius: 0 3px 3px 0;
+    }
+
+    .back-button {
+      background-color: #2a2a2a;
+      border: none;
+      padding: 0.5rem 1rem;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 1rem;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #ffcc00;
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    .content {
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: #1f1f1f;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #ffcc00;
+      text-align: center;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    h2 {
+      color: #ffcc00;
+      cursor: pointer;
+      transition: color 0.3s ease, transform 0.3s ease;
+      margin-top: 1.5rem;
+    }
+
+    h2:hover {
+      color: #fff;
+      transform: translateX(10px);
+    }
+
+    .collapsible-content {
+      display: none;
+      margin-top: 1rem;
+      padding: 1rem;
+      background-color: #2a2a2a;
+      border-left: 4px solid #ffcc00;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .collapsible-content p {
+      margin: 0.5rem 0;
+      color: #ccc;
+    }
+
+    .collapsible-content ul {
+      margin: 0.5rem 0;
+      padding-left: 1.5rem;
+      color: #ccc;
+    }
+
+    a {
+      color: #ffcc00;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #fff;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const headings = document.querySelectorAll('h2');
+      headings.forEach(heading => {
+        heading.addEventListener('click', () => {
+          const content = heading.nextElementSibling;
+          if (content && content.classList.contains('collapsible-content')) {
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <span class="logo-black">Study</span><span class="logo-yellow">Hub</span>
+    </div>
+  </div>
+
+  <div class="content">
+    <a href="index.html" class="back-button">← Back to Home</a>
+    <h1>Personality Development</h1>
+
+    <h2 class="collapsible">Chapter 1: Knowing Oneself</h2>
+    <div class="collapsible-content">
+      <p>Self-awareness is the cornerstone of personal development. This chapter introduces the concept of understanding one’s identity, strengths, weaknesses, and the factors that influence behavior and decision-making. Adolescence is a critical stage where individuals begin to establish their sense of self while navigating physical, cognitive, and emotional changes. Recognizing personal development domains helps adolescents prepare for adulthood and handle the expectations placed upon them by society, peers, and family.</p>
+
+      <h3>Unit I. Personal Development</h3>
+      <ul>
+        <li>The continuous process of understanding and developing oneself to achieve one’s fullest potential.</li>
+      </ul>
+
+      <h3>Unit II. Domains of Development</h3>
+      <ul>
+        <li>Physical Domain:</li>
+        <ul>
+          <li>Changes in primary sex characteristics (genitals)</li>
+          <li>Secondary sex characteristics (pubic hair, voice changes)</li>
+        </ul>
+        <li>Cognitive Domain:</li>
+        <ul>
+          <li>Growth in mental capabilities</li>
+          <li>Development of knowledge, intelligence, and problem-solving</li>
+        </ul>
+        <li>Psychosocial Domain:</li>
+        <ul>
+          <li>Emotional maturity</li>
+          <li>Ability to form healthy relationships and express affection</li>
+        </ul>
+      </ul>
+
+      <h3>Unit III. Adolescence</h3>
+      <ul>
+        <li>Transitional stage between childhood and adulthood.</li>
+        <li>Involves establishing identity and handling physical, emotional, and social transformations.</li>
+      </ul>
+
+      <h3>Unit IV. Peer Pressure</h3>
+      <ul>
+        <li>Influence from members of peer groups.</li>
+        <li>Can lead to positive support or negative deviant behaviors (substance abuse, early pregnancy).</li>
+      </ul>
+
+      <h3>Unit V. Self-Discovery</h3>
+      <ul>
+        <li>Establishment of identity through roles defined by society.</li>
+        <li>Common dilemmas include uncertainty in decision-making and questioning life purpose.</li>
+      </ul>
+
+      <h3>Unit VI. Johari’s Window Model</h3>
+      <ul>
+        <li>Public Self: Known to self and others.</li>
+        <li>Private Self: Known to self, hidden from others.</li>
+        <li>Blind Self: Unknown to self but known by others.</li>
+        <li>Undiscovered Self: Unknown to both self and others.</li>
+      </ul>
+    </div>
+
+    <h2 class="collapsible">Chapter 2: The Challenges of Middle and Late Adolescence</h2>
+    <div class="collapsible-content">
+      <p>Adolescence is marked by significant growth and challenges, especially in middle and late stages. This chapter explores how adolescents shift from dependency to independence, face increased responsibilities, and navigate the expectations of their families, schools, and broader communities. Success during this stage depends heavily on open communication, emotional support, and the ability to manage changes and stressors effectively.</p>
+
+      <h3>Unit I. Transition from Dependency to Independence</h3>
+      <ul>
+        <li>Adolescents gradually shift from parental dependence to establishing autonomy.</li>
+      </ul>
+
+      <h3>Unit II. Factors Affecting Adolescence</h3>
+      <ul>
+        <li>Parental rejection, abuse, socio-economic status, and early deprivation can affect adolescent development.</li>
+      </ul>
+
+      <h3>Unit III. Family and Social Influences</h3>
+      <ul>
+        <li>Communication and affection from parents play a crucial role in healthy development.</li>
+        <li>Adolescents who feel unconditional love tend to be better adjusted.</li>
+      </ul>
+
+      <h3>Unit IV. Challenges in School and Community</h3>
+      <ul>
+        <li>Compliance with school requirements and societal expectations.</li>
+        <li>Self-presentation and managing one’s public image are crucial during this stage.</li>
+      </ul>
+    </div>
+
+    <h2 class="collapsible">Chapter 3: Coping with Stress in Adolescence</h2>
+    <div class="collapsible-content">
+      <p>Stress is an unavoidable part of adolescence due to physiological, emotional, and social pressures. This chapter identifies the different sources of stress, explains physiological responses, and presents various coping strategies that help individuals maintain emotional balance and resilience during challenging times.</p>
+
+      <h3>Unit I. Sources of Stress</h3>
+      <ul>
+        <li>Natural Disasters: Typhoons, earthquakes, floods.</li>
+        <li>Frustrating Daily Experiences: Traffic, academic difficulties.</li>
+        <li>Interpersonal Relationships: Conflicts with family or peers.</li>
+      </ul>
+
+      <h3>Unit II. Responses to Stress</h3>
+      <ul>
+        <li>Indicators include increased heart rate, blood pressure, pupil dilation, decreased saliva secretion.</li>
+      </ul>
+
+      <h3>Unit III. Coping Strategies</h3>
+      <ul>
+        <li>Talk it out: Confide in trusted individuals.</li>
+        <li>Escape for a while: Engage in relaxing activities.</li>
+        <li>Work off anger: Exercise to release tension.</li>
+        <li>Give in occasionally: Balance principles with flexibility.</li>
+        <li>Doing good deeds: Find satisfaction in helping others.</li>
+        <li>Do tasks one at a time: Prioritize and organize.</li>
+        <li>Determine strengths: Focus on personal abilities.</li>
+        <li>Minimize criticisms: Be constructive.</li>
+        <li>Avoid comparisons: Focus on personal growth.</li>
+        <li>Be proactive: Engage actively in life.</li>
+        <li>Plan leisure time: Allow for rest and recovery.</li>
+      </ul>
+    </div>
+
+    <h2 class="collapsible">Chapter 4: The Power of the Mind</h2>
+    <div class="collapsible-content">
+      <p>The human mind plays a central role in personal development. This chapter discusses brain structure, lateralization of functions, and how mental activities are influenced by biological processes. Understanding how the brain works empowers individuals to maximize their cognitive abilities and manage their emotional and physical health better.</p>
+
+      <h3>Unit I. The Brain and Its Hemispheres</h3>
+      <ul>
+        <li>Brain processes information, controls movements, and regulates emotions.</li>
+        <li>Left Hemisphere: Logical thinking, analysis, language, mathematics.</li>
+        <li>Right Hemisphere: Creativity, intuition, arts, holistic thinking.</li>
+      </ul>
+
+      <h3>Unit II. The Four Lobes</h3>
+      <ul>
+        <li>Frontal Lobe: Decision-making, speech, voluntary movements.</li>
+        <li>Temporal Lobe: Hearing, memory, meaningful speech.</li>
+        <li>Occipital Lobe: Visual processing.</li>
+        <li>Parietal Lobe: Touch, taste, and temperature sensations.</li>
+      </ul>
+
+      <h3>Unit III. Activities Enhancing Brain Functions</h3>
+      <ul>
+        <li>Left Brain Activities:</li>
+        <ul>
+          <li>Puzzles</li>
+          <li>Math</li>
+          <li>Reading</li>
+          <li>Public speaking</li>
+        </ul>
+        <li>Right Brain Activities:</li>
+        <ul>
+          <li>Dancing</li>
+          <li>Painting</li>
+          <li>Music</li>
+        </ul>
+      </ul>
+
+      <h3>Unit IV. Neurotransmitters</h3>
+      <ul>
+        <li>Serotonin: Mood, sleep, appetite.</li>
+        <li>Dopamine: Pleasure, sensory experiences.</li>
+        <li>Acetylcholine: Attention, memory, muscle contraction.</li>
+        <li>Endorphins: Mood, pain relief.</li>
+        <li>GABA: Sleep regulation, movement inhibition.</li>
+      </ul>
+
+      <h3>Unit V. Endocrine Glands and Hormones</h3>
+      <ul>
+        <li>Pituitary Gland: Master gland controlling other glands.</li>
+        <li>Pineal Gland: Produces melatonin for sleep cycles.</li>
+        <li>Thyroid Gland: Regulates metabolism.</li>
+        <li>Pancreas: Controls blood sugar with insulin.</li>
+        <li>Adrenal Glands: Regulate stress response.</li>
+        <li>Gonads: Produce sex hormones for reproduction.</li>
+      </ul>
+    </div>
+
+    <h2 class="collapsible">Chapter 5: Mental Health and Well-Being in Middle and Late Adolescence</h2>
+    <div class="collapsible-content">
+      <p>Mental health is essential for overall well-being, particularly during the complex stage of adolescence. This chapter examines what constitutes good mental health, signs of mental health challenges, defense mechanisms, and life events that can impact emotional wellness. Strategies for maintaining good mental health are also emphasized.</p>
+
+      <h3>Unit I. Mental Health and Well-Being</h3>
+      <ul>
+        <li>Mental health: Psychological state, can be positive or negative.</li>
+        <li>Well-being: Holistic view including physical, spiritual, and psychological wellness.</li>
+      </ul>
+
+      <h3>Unit II. Characteristics of Positive Mental Health</h3>
+      <ul>
+        <li>Self-Acceptance: Positive attitude toward oneself.</li>
+        <li>Personal Growth: Ongoing development and learning.</li>
+        <li>Purpose in Life: Having direction and goals.</li>
+        <li>Positive Relations: Healthy social relationships.</li>
+      </ul>
+
+      <h3>Unit III. Signs of Failing Mental Health</h3>
+      <ul>
+        <li>Depression: Persistent loneliness, loss of interest, weight changes, insomnia.</li>
+        <li>Anxiety: Irrational fear and worry.</li>
+        <li>Sudden changes in mood or behavior.</li>
+        <li>Poor performance due to emotional struggles.</li>
+      </ul>
+
+      <h3>Unit IV. Defense Mechanisms</h3>
+      <ul>
+        <li>Rationalization: Making excuses.</li>
+        <li>Projection: Attributing one’s feelings to others.</li>
+        <li>Displacement: Redirecting emotions to safer outlets.</li>
+        <li>Repression: Unconscious forgetting.</li>
+        <li>Egocentrism: Overemphasizing self-importance.</li>
+        <li>Reaction Formation: Acting opposite to true feelings.</li>
+        <li>Regression: Returning to earlier behaviors.</li>
+        <li>Identification: Modeling after someone else.</li>
+      </ul>
+
+      <h3>Unit V. Life Instances Affecting Mental Health</h3>
+      <ul>
+        <li>Seeking independence from parents.</li>
+        <li>Unproductive leisure activities.</li>
+        <li>Heartbreak in romantic relationships.</li>
+        <li>Struggles with peer adjustment.</li>
+        <li>Confusion over career choices.</li>
+      </ul>
+
+      <h3>Unit VI. Ways to Maintain Good Mental Health</h3>
+      <ul>
+        <li>Value oneself.</li>
+        <li>Care for the body.</li>
+        <li>Surround oneself with supportive people.</li>
+        <li>Manage stress.</li>
+        <li>Set realistic goals.</li>
+        <li>Quiet the mind.</li>
+        <li>Seek help when needed.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

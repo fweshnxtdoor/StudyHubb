@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>General Mathematics</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #fff;
+      padding: 1rem;
+      line-height: 1.8;
+    }
+
+    .navbar {
+      background-color: #1f1f1f;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .logo {
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      display: flex;
+    }
+
+    .logo-black {
+      background-color: #000;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .logo-yellow {
+      background-color: #ffcc00;
+      color: #000;
+      padding: 4px 8px;
+      border-radius: 0 3px 3px 0;
+    }
+
+    .back-button {
+      background-color: #2a2a2a;
+      border: none;
+      padding: 0.5rem 1rem;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 1rem;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #ffcc00;
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    .content {
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: #1f1f1f;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #ffcc00;
+      text-align: center;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    h2 {
+      color: #ffcc00;
+      margin-top: 1.5rem;
+    }
+
+    ul {
+      margin: 1rem 0;
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+      color: #ccc;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #ccc;
+      text-align: justify;
+      line-height: 1.8;
+    }
+
+    .collapsible {
+      color: #ffcc00;
+      cursor: pointer;
+      transition: color 0.3s ease, transform 0.3s ease;
+      margin-top: 1.5rem;
+    }
+
+    .collapsible:hover {
+      color: #fff;
+      transform: translateX(10px);
+    }
+
+    .collapsible-content {
+      display: none;
+      margin-top: 1rem;
+      padding: 1rem;
+      background-color: #2a2a2a;
+      border-left: 4px solid #ffcc00;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .collapsible-content ul {
+      margin: 0.5rem 0;
+      padding-left: 1.5rem;
+      color: #ccc;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const headings = document.querySelectorAll('.collapsible');
+      headings.forEach(heading => {
+        heading.addEventListener('click', () => {
+          const content = heading.nextElementSibling;
+          if (content && content.classList.contains('collapsible-content')) {
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <span class="logo-black">Study</span><span class="logo-yellow">Hub</span>
+    </div>
+    <a href="index.html" class="back-button">← Back to Home</a>
+  </div>
+
+  <div class="content">
+    <h2 class="collapsible">Chapter 1: Functions</h2>
+    <div class="collapsible-content">
+      <p>Functions are a foundational part of mathematics. They model real-world relationships by assigning each input exactly one output. Mastering functions is essential for analyzing mathematical patterns and problem-solving in algebra and calculus.</p>
+      <h3>Unit I. Definition and Representation of Functions</h3>
+      <ul>
+        <li>A function is a relation where each element of the domain is paired with exactly one element of the range.</li>
+        <li>The domain is the set of all possible input values.</li>
+        <li>The range is the set of all possible output values.</li>
+        <li>Function notation is written as f(x)=expression.</li>
+        <li>Mapping diagrams show how each element of the domain is matched with an element in the range.</li>
+      </ul>
+      <h3>Unit II. Types of Functions</h3>
+      <ul>
+        <li>Linear Function: f(x)=mx+b</li>
+        <li>Quadratic Function: f(x)= ax^2+bx+c</li>
+        <li>Piecewise Function: Defined by different expressions depending on the input interval</li>
+        <li>Constant Function: f(x)=c</li>
+        <li>Identity Function: f(x)=x</li>
+      </ul>
+      <h3>Unit III. Operations on Functions</h3>
+      <ul>
+        <li>Addition: (f+g)(x)=f(x)+g(x)</li>
+        <li>Subtraction: (f−g)(x)=f(x)−g(x)</li>
+        <li>Multiplication: (f⋅g)(x)=f(x)⋅g(x)</li>
+        <li>Division: (f/g)(x) = f(x)/g(x), where g(x)≠0</li>
+        <li>Composition: (f∘g)(x)=f(g(x))</li>
+        <li>Inverse Function: (f^−1)(𝑥), where 𝑓(𝑓^−1(𝑥)) = 𝑥</li>
+      </ul>
+      <h3>Unit IV. Graphing Functions</h3>
+      <ul>
+        <li>The Cartesian plane consists of a horizontal axis (x-axis) and a vertical axis (y-axis).</li>
+        <li>Intercepts are points where the graph crosses the axes.</li>
+        <li>Asymptotes are lines that a graph approaches but never touches.</li>
+        <li>Transformations include:</li>
+        <ul>
+          <li>Vertical and horizontal shifts</li>
+          <li>Reflections across the x- or y-axis</li>
+          <li>Vertical and horizontal stretching or compressing</li>
+        </ul>
+      </ul>
+    </div>
+
+    <h2 class="collapsible">Chapter 2: Interest</h2>
+    <div class="collapsible-content">
+      <p>Interest calculations are vital in finance. They help us understand how money grows over time. This chapter covers both simple and compound interest, essential in saving, investing, and borrowing.</p>
+      <h3>Unit I. Simple Interest</h3>
+      <ul>
+        <li>Simple interest is calculated using the formula: 𝐼 = 𝑃𝑟𝑡</li>
+        <li>Where:</li>
+        <ul>
+          <li>I: Interest</li>
+          <li>P: Principal</li>
+          <li>r: Annual interest rate (decimal)</li>
+          <li>t: Time in years</li>
+        </ul>
+        <li>Total amount is given by: A=P+I</li>
+      </ul>
+      <h3>Unit II. Compound Interest</h3>
+      <ul>
+        <li>Compound interest is calculated using the formula: A=P(1+r/n)^nt</li>
+        <li>Where:</li>
+        <ul>
+          <li>A: Final amount</li>
+          <li>P: Principal</li>
+          <li>r: Annual interest rate (decimal)</li>
+          <li>n: Number of compounding periods per year</li>
+          <li>t: Time in years</li>
+        </ul>
+        <li>Continuous compounding uses: A=Pe^rt</li>
+      </ul>
+      <h3>Unit III. Applications of Interest</h3>
+      <ul>
+        <li>Loan and debt repayment</li>
+        <li>Investment and savings growth</li>
+        <li>Credit card interest accumulation</li>
+        <li>Mortgage and long-term financing calculations</li>
+      </ul>
+    </div>
+
+    <h2 class="collapsible">Chapter 3: Propositions</h2>
+    <div class="collapsible-content">
+      <p>Propositions are statements that are either true or false. This chapter helps students understand logical statements and how they are used in arguments and reasoning.</p>
+      <h3>Unit I. Introduction to Propositions</h3>
+      <ul>
+        <li>A proposition is a declarative sentence that is either true or false.</li>
+        <li>Examples:</li>
+        <ul>
+          <li>"2 + 2 = 4" (true)</li>
+          <li>"The sun is cold" (false)</li>
+        </ul>
+        <li>Not propositions:</li>
+        <ul>
+          <li>Questions like "Are you there?"</li>
+          <li>Commands like "Close the door."</li>
+          <li>Expressions of opinion like "This is nice."</li>
+        </ul>
+      </ul>
+      <h3>Unit II. Compound Propositions</h3>
+      <ul>
+        <li>Compound propositions combine simple statements using logical operators.</li>
+        <li>Conjunction: p∧q</li>
+        <li>Disjunction: p∨q</li>
+        <li>Negation: ∼p</li>
+        <li>Conditional: p→q</li>
+        <li>Biconditional: p↔q</li>
+      </ul>
+      <h3>Unit III. Truth Values</h3>
+      <ul>
+        <li>A contradiction is a statement that is always false.</li>
+        <li>A tautology is a statement that is always true.</li>
+        <li>A contingency is a statement that can be either true or false depending on the truth values of its components.</li>
+      </ul>
+    </div>
+
+    <h2 class="collapsible">Chapter 4: Logical Connectives</h2>
+    <div class="collapsible-content">
+      <p>Logical connectives help link statements to form compound logic. This chapter focuses on constructing and evaluating logical arguments using formal symbols and truth tables.</p>
+      <h3>Unit I. Types of Logical Connectives</h3>
+      <ul>
+        <li>Negation (∼): Reverses the truth value</li>
+        <li>Conjunction (∧): True only if both statements are true</li>
+        <li>Disjunction (∨): True if at least one statement is true</li>
+        <li>Conditional (→): False only if the first is true and the second is false</li>
+        <li>Biconditional (↔): True when both statements have the same truth value</li>
+      </ul>
+      <h3>Unit II. Truth Tables</h3>
+      <ul>
+        <li>Truth tables help evaluate the truth value of compound logical statements.</li>
+      </ul>
+      <h3>Unit III. Applications of Logical Connectives</h3>
+      <ul>
+        <li>Translating English statements into symbolic logic</li>
+        <li>Constructing and analyzing logical arguments</li>
+        <li>Determining argument validity</li>
+        <li>Identifying logical fallacies</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

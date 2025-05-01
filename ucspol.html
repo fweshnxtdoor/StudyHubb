@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Understanding Culture, Society, and Politics</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #121212;
+      color: #fff;
+      padding: 1rem;
+      line-height: 1.8;
+    }
+
+    .navbar {
+      background-color: #1f1f1f;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .logo {
+      font-family: 'Arial', sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      display: flex;
+    }
+
+    .logo-black {
+      background-color: #000;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .logo-yellow {
+      background-color: #ffcc00;
+      color: #000;
+      padding: 4px 8px;
+      border-radius: 0 3px 3px 0;
+    }
+
+    .back-button {
+      background-color: #2a2a2a;
+      border: none;
+      padding: 0.5rem 1rem;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 1rem;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #ffcc00;
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    .content {
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: #1f1f1f;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #ffcc00;
+      text-align: center;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    h2 {
+      color: #ffcc00;
+      cursor: pointer;
+      transition: color 0.3s ease, transform 0.3s ease;
+      margin-top: 1.5rem;
+    }
+
+    h2:hover {
+      color: #fff;
+      transform: translateX(10px);
+    }
+
+    .collapsible-content {
+      display: none;
+      margin-top: 1rem;
+      padding: 1rem;
+      background-color: #2a2a2a;
+      border-left: 4px solid #ffcc00;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .collapsible-content p {
+      margin: 0.5rem 0;
+      color: #ccc;
+    }
+
+    .collapsible-content ul {
+      margin: 0.5rem 0;
+      padding-left: 1.5rem;
+      color: #ccc;
+    }
+
+    a {
+      color: #ffcc00;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #fff;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const headings = document.querySelectorAll('h2');
+      headings.forEach(heading => {
+        heading.addEventListener('click', () => {
+          const content = heading.nextElementSibling;
+          if (content && content.classList.contains('collapsible-content')) {
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <span class="logo-black">Study</span><span class="logo-yellow">Hub</span>
+    </div>
+  </div>
+
+  <div class="content">
+    <a href="index.html" class="back-button">← Back to Home</a>
+    <h1>Understanding Culture, Society, and Politics</h1>
+
+    <h2 class="collapsible">Chapter 1: Understanding Culture, Society, and Politics</h2>
+    <div class="collapsible-content">
+      <p>This unit introduces the fundamental concepts of culture, society, and politics, laying the groundwork for understanding human behavior and social interaction. It emphasizes how identity, culture, and societal norms shape individuals and communities, influencing their values, behaviors, and political systems.</p>
+
+      <h3>Unit I. Sharing of Social and Cultural Backgrounds</h3>
+      <ul>
+        <li>Cultural Identity: The sense of belonging to a group (e.g., nationality, religion, ethnicity).</li>
+        <li>Cultural Background: Influences from ethnicity, religion, social class, gender, and language.</li>
+        <li>Gender and Sexuality: Masculinity and femininity traits; identity crises related to gender roles.</li>
+        <li>Socio-Economic Status: Financial and social standing based on income, education, occupation.</li>
+        <li>Ethnicity: Belonging to a group with common cultural traditions.</li>
+        <li>Filipino ethno-linguistic groups: Ivatan, Ilocano, Kapampangan, Tagalog, Bicolano, Visayan groups.</li>
+      </ul>
+    </div>
+
+    <h2 class="collapsible">Chapter 2: Culture and Society</h2>
+    <div class="collapsible-content">
+      <p>This unit discusses the formation and evolution of societies, the role of culture in social interaction, and how technological and economic developments have shaped human communities.</p>
+
+      <h3>Unit I. Society and Its Theories</h3>
+      <ul>
+        <li>Philosophical foundations by Plato, Aristotle, St. Augustine, and Thomas More.</li>
+      </ul>
+
+      <h3>Unit II. Types of Societies</h3>
+      <ul>
+        <li>Pre-Industrial Societies:</li>
+        <ul>
+          <li>Hunting and Gathering: Small, nomadic groups.</li>
+          <li>Pastoral Societies: Domestication of animals.</li>
+          <li>Horticultural Societies: Cultivation of plants.</li>
+          <li>Agrarian Societies: Crop cultivation and animal raising.</li>
+          <li>Feudal Societies: Land ownership and protection exchanges.</li>
+        </ul>
+        <li>Industrial Societies: Mechanization, mass production, rise of capitalism.</li>
+        <li>Post-Industrial Societies: Service and information-based economies.</li>
+      </ul>
+
+      <h3>Unit III. Modern Society</h3>
+      <ul>
+        <li>Mass production and money-based economy.</li>
+        <li>Debt and banking systems became prevalent.</li>
+      </ul>
+
+      <h3>Unit IV. Globalization</h3>
+      <ul>
+        <li>Defined by Joseph Stiglitz as closer integration of countries through reduced costs of transport and communication.</li>
+      </ul>
+    </div>
+
+    <h2 class="collapsible">Chapter 3: Human Biocultural and Social Evolution</h2>
+    <div class="collapsible-content">
+      <p>Human evolution is not only a biological process but also a cultural journey. This unit explores how Homo sapiens have evolved both physically and culturally over millions of years. It introduces anthropology, the discipline that studies human origins and adaptations, and it explains the mechanisms behind cultural and biological changes.</p>
+
+      <h3>Unit I. Biological and Cultural Evolution</h3>
+      <ul>
+        <li>Biological Evolution: Adaptations based on environmental changes.</li>
+        <li>Cultural Evolution: Development of societies and ideas over time.</li>
+      </ul>
+
+      <h3>Unit II. Disciplines Related to Human Evolution</h3>
+      <ul>
+        <li>Anthropology: Study of human origin and development.</li>
+        <li>Physical Anthropology: Study of biological aspects.</li>
+        <li>Dating Methods:</li>
+        <ul>
+          <li>Relative Dating: Comparison-based.</li>
+          <li>Absolute Dating: Precise age using methods like radiocarbon dating.</li>
+        </ul>
+      </ul>
+
+      <h3>Unit III. Geologic Time and Eras</h3>
+      <ul>
+        <li>Paleozoic, Mesozoic, Cenozoic eras describe Earth’s evolutionary timeline.</li>
+      </ul>
+
+      <h3>Unit IV. Paleontology</h3>
+      <ul>
+        <li>Study of fossils to understand prehistoric life.</li>
+      </ul>
+
+      <h3>Unit V. Evolutionary Theories and Early Primates</h3>
+      <ul>
+        <li>Darwin’s Theory of Natural Selection.</li>
+        <li>Early primates like Dryopithecus, Pliopithecus, and Proconsul.</li>
+      </ul>
+    </div>
+
+    <h2 class="collapsible">Chapter 4: Primary and Secondary Groups</h2>
+    <div class="collapsible-content">
+      <p>Humans are inherently social beings who organize themselves into groups for survival, emotional support, and achieving collective goals. This unit focuses on social groups, particularly distinguishing between primary groups, which provide intimate relationships, and secondary groups, which are more goal-oriented and impersonal.</p>
+
+      <h3>Unit I. Social Groups</h3>
+      <ul>
+        <li>Definition: Organized groups based on reciprocal relations and common identity.</li>
+      </ul>
+
+      <h3>Unit II. Types of Groups</h3>
+      <ul>
+        <li>Primary Groups:</li>
+        <ul>
+          <li>Close, personal ties (e.g., family, peer groups, neighborhoods).</li>
+        </ul>
+        <li>Secondary Groups:</li>
+        <ul>
+          <li>Impersonal, goal-oriented ties (e.g., business organizations, universities).</li>
+        </ul>
+      </ul>
+
+      <h3>Unit III. In-Groups and Out-Groups</h3>
+      <ul>
+        <li>In-Groups: Strong identification and loyalty.</li>
+        <li>Out-Groups: Lack of identification.</li>
+      </ul>
+
+      <h3>Unit IV. Minimal Group Paradigm</h3>
+      <ul>
+        <li>Explains group bias and prejudice formation.</li>
+      </ul>
+    </div>
+
+    <h2 class="collapsible">Chapter 5: Kinship, Marriage, and Political Organization</h2>
+    <div class="collapsible-content">
+      <p>Family and political organization are the two oldest and most fundamental human social institutions. This unit delves into kinship systems that define family relationships and obligations across cultures, marriage patterns that formalize alliances, and political structures that govern societies.</p>
+
+      <h3>Unit I. Kinship</h3>
+      <ul>
+        <li>Types:</li>
+        <ul>
+          <li>Fictive: Social ties not based on blood/marriage.</li>
+          <li>Consanguineal: Blood relationships.</li>
+          <li>Affinial: Marriage ties.</li>
+        </ul>
+      </ul>
+
+      <h3>Unit II. Marriage</h3>
+      <ul>
+        <li>Types:</li>
+        <ul>
+          <li>Monogamy: One partner.</li>
+          <li>Polygamy: Multiple partners.</li>
+          <li>Polygyny: One man, multiple women.</li>
+          <li>Polyandry: One woman, multiple men.</li>
+        </ul>
+      </ul>
+
+      <h3>Unit III. Family Structures</h3>
+      <ul>
+        <li>Based on organization:</li>
+        <ul>
+          <li>Conjugal vs. Extended family.</li>
+        </ul>
+        <li>Based on descent:</li>
+        <ul>
+          <li>Patrilineal</li>
+          <li>Matrilineal</li>
+          <li>Bilateral</li>
+        </ul>
+        <li>Based on authority:</li>
+        <ul>
+          <li>Patriarchal</li>
+          <li>Matriarchal</li>
+          <li>Egalitarian</li>
+        </ul>
+      </ul>
+
+      <h3>Unit IV. Political Organization</h3>
+      <ul>
+        <li>Band</li>
+        <li>Tribe</li>
+        <li>Chiefdom</li>
+        <li>State</li>
+      </ul>
+
+      <h3>Unit V. Types of Authority</h3>
+      <ul>
+        <li>Legal</li>
+        <li>Traditional</li>
+        <li>Charismatic</li>
+      </ul>
+
+      <h3>Unit VI. Economic Institutions</h3>
+      <ul>
+        <li>Sole proprietorship</li>
+        <li>Partnership</li>
+        <li>Corporation</li>
+        <li>Cooperatives</li>
+      </ul>
+    </div>
+
+    <h2 class="collapsible">Chapter 6: Social and Political Stratification</h2>
+    <div class="collapsible-content">
+      <p>All societies have systems of inequality, where resources, opportunities, and privileges are distributed unequally. This unit examines how societies categorize people into layers or "strata" based on wealth, power, prestige, and other factors. It analyzes the causes of inequality, the structures that maintain it, and the effects it has on mobility and life chances.</p>
+
+      <h3>Unit I. Social Stratification</h3>
+      <ul>
+        <li>Social Class</li>
+        <li>Social Status</li>
+        <li>Social Role</li>
+      </ul>
+
+      <h3>Unit II. Bases of Stratification</h3>
+      <ul>
+        <li>Power</li>
+        <li>Property</li>
+        <li>Prestige</li>
+      </ul>
+
+      <h3>Unit III. Perspectives</h3>
+      <ul>
+        <li>Functionalist: Stratification serves important functions.</li>
+        <li>Conflict: Stratification stems from inequality and ownership.</li>
+      </ul>
+
+      <h3>Unit IV. Social Mobility</h3>
+      <ul>
+        <li>Horizontal</li>
+        <li>Vertical</li>
+        <li>Career</li>
+        <li>Intergenerational</li>
+      </ul>
+
+      <h3>Unit V. Systems of Stratification</h3>
+      <ul>
+        <li>Closed Systems:</li>
+        <ul>
+          <li>Slavery</li>
+          <li>Estate</li>
+          <li>Caste</li>
+        </ul>
+        <li>Open System:</li>
+        <ul>
+          <li>Class system allowing social mobility.</li>
+        </ul>
+      </ul>
+    </div>
+
+    <h2 class="collapsible">Chapter 8: Social Change</h2>
+    <div class="collapsible-content">
+      <p>Social change is the transformation of culture, behavior, social institutions, and social structures over time. This unit discusses why societies are constantly evolving, what factors drive these changes, and how individuals and groups react to them. It covers both evolutionary and revolutionary change, exploring theories of development, progress, and decline.</p>
+
+      <h3>Unit I. Nature of Social Change</h3>
+      <ul>
+        <li>Change is constant, can be planned or unplanned, and may lead to conflict.</li>
+      </ul>
+
+      <h3>Unit II. Theories of Social Change</h3>
+      <ul>
+        <li>Evolutionary</li>
+        <li>Conflict</li>
+        <li>Cyclical</li>
+        <li>Functionalist</li>
+      </ul>
+
+      <h3>Unit III. Factors Influencing Social Change</h3>
+      <ul>
+        <li>Inventions</li>
+        <li>Discoveries</li>
+        <li>Demographic Changes</li>
+        <li>New Ideas</li>
+        <li>Movements</li>
+      </ul>
+
+      <h3>Unit IV. Characteristics of Social Change</h3>
+      <ul>
+        <li>Universal</li>
+        <li>Intentional/Unintentional</li>
+        <li>Controversial</li>
+        <li>Varied in impact</li>
+      </ul>
+
+      <h3>Unit V. Explanations for Change</h3>
+      <ul>
+        <li>Theological</li>
+        <li>Null</li>
+        <li>Geographic</li>
+        <li>Material</li>
+        <li>Biological</li>
+        <li>Cultural Determinism</li>
+      </ul>
+
+      <h3>Unit VI. Sources of Social Change</h3>
+      <ul>
+        <li>Environment</li>
+        <li>Population Growth</li>
+        <li>Technology</li>
+        <li>Values</li>
+        <li>Cultural Diffusion</li>
+      </ul>
+
+      <h3>Unit VII. Cultural Diffusion</h3>
+      <ul>
+        <li>Primary Diffusion: Migration-based.</li>
+        <li>Secondary Diffusion: Direct transfer.</li>
+        <li>Stimulus Diffusion: Transfer of ideas.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

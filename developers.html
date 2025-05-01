@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developers</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #fff;
+    }
+
+    /* Navbar styling */
+    .navbar {
+      background-color: #1f1f1f;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar:hover {
+      background-color: #2a2a2a;
+    }
+
+    .logo {
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      display: flex;
+    }
+
+    .logo-black {
+      background-color: #000;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .logo-yellow {
+      background-color: #ffcc00;
+      color: #000;
+      padding: 4px 8px;
+      border-radius: 0 3px 3px 0;
+    }
+
+    .home-button {
+      background-color: #2a2a2a;
+      color: #fff;
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .home-button:hover {
+      background-color: #ffcc00;
+      color: #000;
+      transform: scale(1.1);
+    }
+
+    /* Image container styling */
+    .image-container {
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: auto;
+      padding: 2rem;
+      scroll-behavior: smooth;
+      background-color: #1f1f1f;
+      border-top: 2px solid #ffcc00;
+      border-bottom: 2px solid #ffcc00;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .image-box {
+      flex: 0 0 auto;
+      width: 250px;
+      height: 400px;
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: #1e1e1e;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    }
+
+    .image-box:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+      background-color: #2a2a2a;
+    }
+
+    .image-box img {
+      width: 100%;
+      height: 85%;
+      object-fit: cover;
+      border-bottom: 2px solid #ffcc00;
+      transition: transform 0.3s ease;
+    }
+
+    .image-box:hover img {
+      transform: scale(1.1);
+    }
+
+    .instagram-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.5rem;
+      font-size: 14px;
+      color: #fff;
+      background-color: #2a2a2a;
+      border-radius: 0 0 10px 10px;
+      width: 100%;
+      text-align: center;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .instagram-info:hover {
+      background-color: #ffcc00;
+      color: #000;
+    }
+
+    .instagram-info img {
+      width: 20px;
+      height: 20px;
+      border: none;
+      transition: transform 0.3s ease;
+    }
+
+    .instagram-info:hover img {
+      transform: rotate(360deg);
+    }
+
+    .instagram-info a {
+      color: #ffcc00;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .instagram-info a:hover {
+      color: #000;
+    }
+
+    /* Scrollbar styling */
+    .image-container::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .image-container::-webkit-scrollbar-thumb {
+      background-color: #ffcc00;
+      border-radius: 10px;
+    }
+
+    .image-container::-webkit-scrollbar-track {
+      background-color: #2a2a2a;
+    }
+
+    /* Footer styling */
+    .footer {
+      background-color: #1f1f1f;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      border-top: 2px solid #ffcc00;
+      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+      animation: slideIn 1s ease-in-out;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .footer a {
+      color: #ffcc00;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer a:hover {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <span class="logo-black">Study</span><span class="logo-yellow">Hub</span>
+    </div>
+    <a href="index.html" class="home-button">Home</a>
+  </div>
+
+  <div class="image-container">
+    <div class="image-box">
+      <img src="https://scontent.fmnl33-2.fna.fbcdn.net/v/t39.30808-6/471873331_3143728319102739_8536190826996397186_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeH5YoXaolnHlj7llbpBr7D5cYyd-yC714JxjJ37ILvXgs_L18AefxlzLEQoA59oeSXzVkX0X0aqz1HtbTUQoszP&_nc_ohc=d4AWtgdVxzQQ7kNvwGXU9o5&_nc_oc=AdlWBDfSgTYtwsRRBaHPQUuvsDh1UfGuMan8LoHoWELAU46QrrfetlAjeILc8Xixqis&_nc_zt=23&_nc_ht=scontent.fmnl33-2.fna&_nc_gid=t9xoAf02pMN2Uoo3FcQ1iQ&oh=00_AfHTu7Oo_VW0eZ1mv04V29H8TrA69pf6wJAumCAKpIELNQ&oe=68117C1C" alt="Developer 1">
+      <div class="instagram-info">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo">
+        <a href="https://www.instagram.com/fweshnxtdoor" target="_blank">@fweshnxtdoor</a>
+      </div>
+    </div>
+    <div class="image-box">
+      <img src="https://scontent.fmnl33-6.fna.fbcdn.net/v/t39.30808-6/491924960_2115522562204055_1966503822147832327_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFr6nqQIDIEXuuR_CY3zf089Wg1II2DDAD1aDUgjYMMAC0xqPDE5iyIPzxDPlkXRWwpAvdvftzag0hu3QFFH7cY&_nc_ohc=PXteqzPz06cQ7kNvwFZzbto&_nc_oc=AdkUHo1OLnEIC3W3XEskLIsg7MAJ8Rx8YTZ-MQ6foVnjEVCxNjCUapVzQpoz_Dmkyqc&_nc_zt=23&_nc_ht=scontent.fmnl33-6.fna&_nc_gid=SsqFU3oPfBDnN1uenJYDXg&oh=00_AfEs0dk4JvvJjIUWH2yEXdN64iOKtSXg4pklEtY3cUKooA&oe=68119898" alt="Developer 2">
+      <div class="instagram-info">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo">
+        <a href="https://www.instagram.com/ry_csclla" target="_blank">@ry_csclla</a>
+      </div>
+    </div>
+    <div class="image-box">
+      <img src="https://scontent.fmnl3-4.fna.fbcdn.net/v/t39.30808-6/491199293_1392941185473235_6329731421150147404_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFkEsNB1D809RMCD1GQU3Q_trdcYlOnCgm2t1xiU6cKCduVQsKbGHqSvLKn-Ny2AkwCq9oprr9bmKUNbY30iNZj&_nc_ohc=I9KF8_r9grAQ7kNvwH-L1r9&_nc_oc=Adk3Cjxw8092HBgUslz7_lsoIKwbd3X-p3-6KaxSScrQyum0fBR9co63aLP6i-QB5JQ&_nc_zt=23&_nc_ht=scontent.fmnl3-4.fna&_nc_gid=JXU_qDXNA5nLoRAeUi-GLg&oh=00_AfFU98BAC3DZp-MaCUrg6dXVYOfgbRFNBTRFwIlpvtrjcQ&oe=68141F02" alt="Developer 3">
+      <div class="instagram-info">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo">
+        <a href="https://www.instagram.com/l.zzy_g" target="_blank">@l.zzy_g</a>
+      </div>
+    </div>
+    <div class="image-box">
+      <img src="https://scontent.fmnl3-4.fna.fbcdn.net/v/t39.30808-6/493982441_1242598977494901_945489817295615907_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeG3uaI9upMOmrWNVNMbvzKweghUdTrbd5R6CFR1Ott3lITH8EZucEk37k2-IeJMbQXCd_RCEHvpiXUOC8RQ1pKr&_nc_ohc=1e3JEX8VNrYQ7kNvwG1atrc&_nc_oc=Adk2JqToYYtXR4IhaRFowOoZQtJo4MJTzdkzcypBrqO5RkBT7VGSwy1p00QjMufHqE0&_nc_zt=23&_nc_ht=scontent.fmnl3-4.fna&_nc_gid=BnI0egGvsJy6Wh46PLYw1A&oh=00_AfFH9j9kXvA5ZWZZqFWcmNQI-0PfiGlqFH52-mGTOZ1ISw&oe=681427FD" alt="Developer 4">
+      <div class="instagram-info">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo">
+        <a href="https://www.instagram.com/gmakieyne" target="_blank">@gmakieyne</a>
+      </div>
+    </div>
+    <div class="image-box">
+      <img src="https://scontent.fmnl37-1.fna.fbcdn.net/v/t39.30808-6/493643752_122202426596144634_4208272796671544417_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEn0Ge48cG56HQA3wHszZP4mbOST-Io6USZs5JP4ijpRCWY8GrUtWa4hf__VnyABx3YAf5ViAmxlZzSGAj02JDa&_nc_ohc=oIS9f4bGOZEQ7kNvwE15Wrp&_nc_oc=AdkUVAhiOxjvGRwZC3jNqoS_9ta5CnJ0rmmocOz-mYuZNkGkbwYYv4Pz0D49eeufUVM&_nc_zt=23&_nc_ht=scontent.fmnl37-1.fna&_nc_gid=GMN_MEeZOAqeUwASazjXVw&oh=00_AfGRJ9G0wQZEHQkDFzKrPR7eXA9nkYTNw1FbTfpDPovaAw&oe=68140A25" alt="Developer 5">
+      <div class="instagram-info">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo">
+        <a href="https://www.instagram.com/maii.cy08" target="_blank">@maii.cy08</a>
+      </div>
+    </div>
+    <div class="image-box">
+      <img src="https://scontent.fmnl3-3.fna.fbcdn.net/v/t39.30808-6/472881794_1111914637142531_1620524779236898716_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGNK1LK_UnBymF4tM3BlyrLp3prlRhJoXenemuVGEmhd2KsZEyMooMJDiYuWKu0IXNDRqMp5zqYQon2DkTcuAxB&_nc_ohc=fYnqeSkZjaYQ7kNvwEEKzV6&_nc_oc=AdlxaTXUEV92BLUhOA1DCQ4QNI6H5kObszRwYGH5OZmK2_CZ2kkgGu3peH-mFY29jCo&_nc_zt=23&_nc_ht=scontent.fmnl3-3.fna&_nc_gid=4yo7kziaTRa-y-2Xd2l1tg&oh=00_AfEczO0dnbMDFOz9Qfazo-y1zhrAGRjpTMpXLvX9GNz9eA&oe=681525B8" alt="Developer 6">
+      <div class="instagram-info">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo">
+        <a href="https://www.instagram.com/studyhub" target="_blank">@kurtttttsaranillo</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>© 2023 StudyHub. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
+  </div>
+</body>
+</html>

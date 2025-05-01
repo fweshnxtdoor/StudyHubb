@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>General Chemistry</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #121212;
+      color: #fff;
+      padding: 1rem;
+      line-height: 1.8;
+    }
+
+    .navbar {
+      background-color: #1f1f1f;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .logo {
+      font-family: 'Arial', sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      display: flex;
+    }
+
+    .logo-black {
+      background-color: #000;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .logo-yellow {
+      background-color: #ffcc00;
+      color: #000;
+      padding: 4px 8px;
+      border-radius: 0 3px 3px 0;
+    }
+
+    .back-button {
+      background-color: #2a2a2a;
+      border: none;
+      padding: 0.5rem 1rem;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 1rem;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #ffcc00;
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    .content {
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: #1f1f1f;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #ffcc00;
+      text-align: center;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    h2 {
+      color: #ffcc00;
+      cursor: pointer;
+      transition: color 0.3s ease, transform 0.3s ease;
+      margin-top: 1.5rem;
+    }
+
+    h2:hover {
+      color: #fff;
+      transform: translateX(10px);
+    }
+
+    .collapsible-content {
+      display: none;
+      margin-top: 1rem;
+      padding: 1rem;
+      background-color: #2a2a2a;
+      border-left: 4px solid #ffcc00;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .collapsible-content p {
+      margin: 0.5rem 0;
+      color: #ccc;
+    }
+
+    .collapsible-content ul {
+      margin: 0.5rem 0;
+      padding-left: 1.5rem;
+      color: #ccc;
+    }
+
+    a {
+      color: #ffcc00;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #fff;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const headings = document.querySelectorAll('h2');
+      headings.forEach(heading => {
+        heading.addEventListener('click', () => {
+          const content = heading.nextElementSibling;
+          if (content && content.classList.contains('collapsible-content')) {
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <span class="logo-black">Study</span><span class="logo-yellow">Hub</span>
+    </div>
+  </div>
+
+  <div class="content">
+    <a href="index.html" class="back-button">← Back to Home</a>
+    <h1>General Chemistry</h1>
+
+    <h2 class="collapsible">Chapter 1: Chemistry</h2>
+    <div class="collapsible-content">
+      <p>Chemistry is the branch of physical science concerned with the composition, structure, properties, and changes of matter. It studies how substances interact with each other and with energy. Chemistry connects to other sciences like physics, biology, and environmental science, making it a central discipline that explains natural phenomena, the creation of materials, medicines, fuels, and countless other everyday products.</p>
+
+      <h3>Unit I. Branches of Chemistry</h3>
+      <ul>
+        <li>Analytical Chemistry: Identifying components of substances (e.g., wine contamination testing)</li>
+        <li>Inorganic Chemistry: Study of non-carbon compounds</li>
+        <li>Physical Chemistry: Study of energy and structure transformations</li>
+        <li>Biochemistry: Study of chemical processes in living organisms</li>
+        <li>Organic Chemistry: Study of carbon-containing substances</li>
+        <li>Geochemistry: Study of Earth’s chemical composition</li>
+        <li>Pharmaceutical Chemistry: Study of drug synthesis</li>
+        <li>Electrochemistry: Study of chemical reactions involving electricity</li>
+        <li>Industrial Chemistry: Application of chemical principles to industry</li>
+        <li>Metallurgical Chemistry: Study of metals and their extraction</li>
+        <li>Nuclear Chemistry: Study of radioactive materials</li>
+        <li>Photochemistry: Study of chemical effects of light</li>
+        <li>Food Chemistry: Study of food components and processing</li>
+        <li>Agricultural Chemistry: Study of fertilizers, pesticides, and soil fertility</li>
+        <li>Polymer Chemistry: Study of plastics and polymers</li>
+        <li>Colloidal Chemistry: Study of colloidal systems</li>
+      </ul>
+    </div>
+
+    <h2 class="collapsible">Chapter 2: Matter and Its Properties</h2>
+    <div class="collapsible-content">
+      <p>Matter is anything that occupies space and has mass. Understanding matter is essential because everything in the universe, from the stars to living organisms, is made of matter. Chemists classify matter based on its physical state and composition, describe its properties, and analyze how it changes during physical and chemical processes.</p>
+
+      <h3>Unit I. Phases of Matter</h3>
+      <ul>
+        <li>Solid: Fixed shape and volume</li>
+        <li>Liquid: Fixed volume, flows to take the shape of its container</li>
+        <li>Gas: No fixed shape or volume</li>
+        <li>Plasma: Ionized gas capable of conducting electricity</li>
+        <li>Supercritical Fluids: Combination properties of gases and liquids</li>
+        <li>Degenerate Matter: Extremely dense collapsed state</li>
+      </ul>
+
+      <h3>Unit II. Properties of Matter</h3>
+      <ul>
+        <li>Physical Properties: Observable without changing composition (e.g., melting point)</li>
+        <li>Intensive properties: Independent of amount (e.g., density)</li>
+        <li>Extensive properties: Dependent on amount (e.g., mass)</li>
+        <li>Chemical Properties: Observable only during chemical change (e.g., flammability)</li>
+      </ul>
+
+      <h3>Unit III. Changes in Matter</h3>
+      <ul>
+        <li>Physical Change: Changes in form without changing composition</li>
+        <li>Chemical Change: Formation of new substances with different properties</li>
+      </ul>
+
+      <h3>Unit IV. Classifications in Matter</h3>
+      <ul>
+        <li>Pure Substances:</li>
+        <ul>
+          <li>Elements: Cannot be broken down further</li>
+          <li>Metals (e.g., gold, iron)</li>
+          <li>Non-metals (e.g., oxygen, chlorine)</li>
+          <li>Metalloids (e.g., silicon, arsenic)</li>
+        </ul>
+        <li>Compounds:</li>
+        <ul>
+          <li>Organic (e.g., hydrocarbons)</li>
+          <li>Inorganic (e.g., salts, acids, bases)</li>
+        </ul>
+        <li>Mixtures:</li>
+        <ul>
+          <li>Homogeneous (e.g., saltwater)</li>
+          <li>Heterogeneous (e.g., sand and water)</li>
+        </ul>
+      </ul>
+
+      <h3>Unit V. Methods of Separating Mixtures</h3>
+      <ul>
+        <li>Filtration: Separating solids from liquids</li>
+        <li>Evaporation: Removing a liquid to leave solid residue</li>
+        <li>Distillation: Separation based on boiling points</li>
+        <li>Fractional Distillation: Separation of liquid-liquid mixtures</li>
+        <li>Decantation: Pouring off a liquid from solids</li>
+        <li>Centrifugation: Spinning to separate by density</li>
+        <li>Chromatography: Separation based on movement through a medium</li>
+        <li>Separatory Funnel: Separating immiscible liquids</li>
+        <li>Magnet: Separating magnetic from non-magnetic substances</li>
+      </ul>
+
+      <h3>Unit VI. Chemical Symbols to Represent Substances</h3>
+      <ul>
+        <li>First letter capitalized, second letter lowercase (e.g., Na for Sodium, Fe for Iron)</li>
+      </ul>
+    </div>
+
+    <h2 class="collapsible">Chapter 3: Measurements</h2>
+    <div class="collapsible-content">
+      <p>Measurement allows chemists to quantify observations and conduct experiments systematically. Without precise measurement, chemical reactions would be unpredictable and uncontrollable. Measurement ensures consistency and reliability across chemical studies.</p>
+
+      <h3>Unit I. Units of Measurement</h3>
+      <ul>
+        <li>Length: meter (m)</li>
+        <li>Mass: kilogram (kg)</li>
+        <li>Time: second (s)</li>
+        <li>Temperature: kelvin (K)</li>
+        <li>Volume: liter (L, non-SI)</li>
+      </ul>
+
+      <h3>Unit II. Precision and Accuracy</h3>
+      <ul>
+        <li>Precision: How close measurements are to each other</li>
+        <li>Accuracy: How close measurements are to the true value</li>
+      </ul>
+
+      <h3>Unit III. Percent Error</h3>
+      <ul>
+        <li>Percent Error = |Experimental Value - True Value| / True Value × 100%</li>
+      </ul>
+
+      <h3>Unit IV. Scientific Notation</h3>
+      <ul>
+        <li>Expressing numbers using powers of ten (e.g., 3.0 × 10⁸)</li>
+      </ul>
+
+      <h3>Unit V. Significant Figures</h3>
+      <ul>
+        <li>Rules govern rounding and calculations (addition, subtraction, multiplication, division).</li>
+      </ul>
+
+      <h3>Unit VI. Dimensional Analysis in Conversion</h3>
+      <ul>
+        <li>Using conversion factors to move between units.</li>
+      </ul>
+    </div>
+
+    <h2 class="collapsible">Chapter 4: Atomic Theory</h2>
+    <div class="collapsible-content">
+      <p>The atomic theory explains that all matter is composed of atoms, the smallest units of chemical elements. Over time, the model of the atom has evolved to explain chemical behavior and the structure of matter more precisely.</p>
+
+      <h3>Unit I. Early Atomic Theories</h3>
+      <ul>
+        <li>Leucippus and Democritus: Concept of indivisible atoms</li>
+        <li>Aristotle: Four-element theory (earth, air, fire, water)</li>
+      </ul>
+
+      <h3>Unit II. Modern Atomic Theory</h3>
+      <ul>
+        <li>Dalton: Atoms are indivisible; atoms of the same element are identical</li>
+        <li>Laws:</li>
+        <ul>
+          <li>Law of Conservation of Mass</li>
+          <li>Law of Definite Proportion</li>
+          <li>Law of Multiple Proportions</li>
+        </ul>
+      </ul>
+
+      <h3>Unit III. Composition of the Atom</h3>
+      <ul>
+        <li>Thomson: Discovered electrons (plum pudding model)</li>
+        <li>Rutherford: Discovered protons (gold-foil experiment)</li>
+        <li>Chadwick: Discovered neutrons</li>
+      </ul>
+
+      <h3>Unit IV. Atomic Particles</h3>
+      <ul>
+        <li>Protons: Positive charge</li>
+        <li>Neutrons: No charge</li>
+        <li>Electrons: Negative charge</li>
+      </ul>
+
+      <h3>Unit V. The Periodic Table</h3>
+      <ul>
+        <li>Elements are organized by increasing atomic number and similar chemical properties. Contributions by Dobereiner, Newlands, and Mendeleev shaped the periodic table.</li>
+      </ul>
+    </div>
+
+    <h2 class="collapsible">Chapter 5: Stoichiometry</h2>
+    <div class="collapsible-content">
+      <p>Stoichiometry allows chemists to predict the amounts of reactants and products involved in chemical reactions. It provides a bridge between the atomic and macroscopic worlds.</p>
+
+      <h3>Unit I. The Mole</h3>
+      <ul>
+        <li>1 mole = 6.022 × 10²³ particles (Avogadro’s number)</li>
+      </ul>
+
+      <h3>Unit II. Molar Mass</h3>
+      <ul>
+        <li>Mass of one mole of a substance, based on atomic masses</li>
+      </ul>
+
+      <h3>Unit III. Mole Conversions</h3>
+      <ul>
+        <li>Converting between grams, moles, and particles</li>
+      </ul>
+    </div>
+
+    <h2 class="collapsible">Chapter 6: Chemical Reactions</h2>
+    <div class="collapsible-content">
+      <p>Chemical reactions describe how substances transform into new materials through the making and breaking of bonds. Observing and understanding chemical reactions is central to the study of chemistry.</p>
+
+      <h3>Unit I. Types of Chemical Reactions</h3>
+      <ul>
+        <li>Synthesis: Two or more substances combine</li>
+        <li>Decomposition: One substance breaks down</li>
+        <li>Single Replacement: One element replaces another</li>
+        <li>Double Replacement: Exchange of ions between compounds</li>
+        <li>Combustion: Substance reacts with oxygen producing energy</li>
+        <li>Neutralization: Acid reacts with base to produce salt and water</li>
+      </ul>
+
+      <h3>Unit II. Conservation of Mass</h3>
+      <ul>
+        <li>Matter is neither created nor destroyed during a chemical reaction</li>
+      </ul>
+    </div>
+
+    <h2 class="collapsible">Chapter 7: Chemical Formulas</h2>
+    <div class="collapsible-content">
+      <p>Chemical formulas are symbolic representations of substances, conveying the types and numbers of atoms involved. Proper understanding of formulas is vital for writing equations, predicting products, and naming chemical substances.</p>
+
+      <h3>Unit I. Molecular and Ionic Compounds</h3>
+      <ul>
+        <li>Molecular Formula: For covalent compounds</li>
+        <li>Formula Unit: For ionic compounds</li>
+      </ul>
+
+      <h3>Unit II. Rules for Writing Formulas</h3>
+      <ul>
+        <li>Use Criss-Cross Method for ionic compounds</li>
+      </ul>
+
+      <h3>Unit III. Chemical Nomenclature</h3>
+      <ul>
+        <li>Binary Compounds:</li>
+        <ul>
+          <li>Ionic (metal + non-metal)</li>
+          <li>Covalent (non-metal + non-metal, using prefixes)</li>
+        </ul>
+        <li>Ternary Compounds:</li>
+        <ul>
+          <li>Involves polyatomic ions</li>
+        </ul>
+        <li>Acids:</li>
+        <ul>
+          <li>Binary Acids: H + nonmetal (e.g., HCl)</li>
+          <li>Oxyacids: H + polyatomic ion</li>
+        </ul>
+      </ul>
+
+      <h3>Unit IV. Hydrates</h3>
+      <ul>
+        <li>Compounds with water molecules bound to them (e.g., CuSO₄·5H₂O)</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
